@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>EzLearn</title>
+    <style>
+        .banner {
+            width: 100%;
+            height: 240px;
+            position: relative;
+        }
+
+        .banner img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .container {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .banner h1 {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            font-size: 2em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .selector > * {
+            border: 0;
+            font-size: 1.1em;
+            outline: none;
+            background-color: transparent;
+            align-content: center;
+        }
+
+        .selector option {
+            color: black;
+        }
+
+        .selector {
+            margin-right: 20px;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            gap: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 20px;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .content-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+            width: 400px;
+        }
+
+        .content a {
+            color: #AAAAAA;
+            font-weight: bold;
+        }
+
+        .content label {
+            color: #833C07;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        .content-text div {
+            display: flex;
+            text-align: center;
+        }
+
+        footer li * {
+            text-decoration: none;
+            color: #833C07;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .footer-list {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-list li:nth-child(2) {
+            padding: 0px 10px;
+            border-left:2px solid #AAAAAA;
+            border-right:2px solid #AAAAAA;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="overlay"></div>
+            <div class="container">
+                <i class="fas fa-language"></i>
+                <div class="selector">
+                    <label for="language">Idioma en pantalla:</label>
+                    <select id="disp-lang">
+                        <option value="Español">Español</option>
+                        <option value="English">English</option>
+                        <option value="Français">Français</option>
+                    </select>
+                </div>
+            </div>
+            <h1>!Bienvenido/a a EzLearn!</h1>
+            <img src="../img/students.jpg" alt="Estudiantes Hablando">
+        </div>
+    </header>
+    <div class="content">
+        <div class="content-text">
+            <div>
+                <label>¡Impulsa tú aprendizaje con sesiones interactivas!</label>
+            </div>
+            <div>
+                <a href="#">Saber Más</a>
+            </div>
+        </div>
+        <div class="buttons">
+            <input type="button" value="EMPIEZA AHORA" class="primaryBtn">
+            <input type="button" value="INICIAR SESION" class="secundaryBtn">
+        </div>
+    </div>
+    <footer>
+        <ul class="footer-list">
+            <li>
+                <a href="#">
+                    Contactanos
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Aviso de Privacidad
+                    <i class="fas fa-file-contract"></i>
+                </a >
+            </li>
+            <li>
+                <a href="#">
+                    Instagram
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
