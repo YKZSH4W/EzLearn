@@ -11,11 +11,25 @@ ul {
     list-style: none;
 }
 
+select {
+    outline: none;
+}
+
+option {
+    color: black;
+}
 
 footer {
     position: fixed;
     width: 100%;
     bottom: 20px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .fas.fa-language {
@@ -38,19 +52,19 @@ input[type="button"] {
     width: 270px;
 }
 
-.primaryBtn {
+.primary-btn {
     border: 0;
     background-color: #833C07;
 }
 
-.primaryBtn:hover {
+.primary-btn:hover {
     cursor: pointer;
     border: 4px solid #833C07;
     color: #833C07;
     background-color: transparent;
 }
 
-.secundaryBtn {
+.secundary-btn {
     cursor: pointer;
     color: #AAAAAA;
     border: 4px solid #AAAAAA;
