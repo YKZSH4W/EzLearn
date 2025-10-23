@@ -30,7 +30,7 @@ footer {
     gap: 20px;
 }
 
-.buttons input {
+input[type="button"] {
     border-radius: 20px;
     font-size: 1.2em;
     font-weight: bold;
