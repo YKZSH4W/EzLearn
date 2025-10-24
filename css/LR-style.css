@@ -17,11 +17,11 @@ body {
 .login-box {
   background-color: #FFFFFF;
   border-radius: 15px;
-  padding: 40px;
-  width: 340px;
+  padding: clamp(20px, 4vw, 40px);
+  width: clamp(280px, 60vw, 750px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
-} 
+}
 
 .login-box h1 {
   color: #7b4a12;
