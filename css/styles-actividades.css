@@ -1,0 +1,213 @@
+:root{
+  --bg: #f7efe3;          /* Fondo beige claro */
+  --card-bg: #ffffff;     /* Tarjetas blancas */
+  --text: #3b2a1a;        /* Texto marrón oscuro */
+  --accent: #9c5b24;      /* Marrón medio para botones */
+  --accent-dark: #7c4518; /* Versión más oscura */
+  --header-bg: #7a3d00;   /* Fondo principal del header */
+  --progress-bg: #e0d3c3;
+  --progress-fill: #9c5b24;
+}
+
+/* ======== Base ======== */
+* { box-sizing: border-box; }
+html, body {
+  height:100%;
+  margin:0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/library.jpg") no-repeat center center/cover;
+}
+
+/* ======== Header ======== */
+.site-header {
+  background: var(--header-bg);
+  color: #fff;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 14px;
+  gap:12px;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+.page-title {
+  margin:0;
+  font-size:26px;
+  font-weight:700;
+  flex:1;
+  text-align:center;
+  pointer-events:none;
+}
+
+.icon-btn {
+  min-width:40px;
+  min-height:40px;
+  border:0;
+  background:rgba(255,255,255,0.15);
+  color:#fff;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .2s;
+}
+.icon-btn:hover {
+  background:rgba(255,255,255,0.3);
+}
+
+/* ======== Main ======== */
+.main {
+  width:100%;
+  max-width:1100px;
+  margin:16px auto;
+  padding:0 16px 32px;
+}
+
+/* ======== Card ======== */
+.card {
+  background:var(--card-bg);
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ======== Progreso ======== */
+.progress-card { padding:18px; }
+
+.card-title {
+  margin:0 0 12px 0;
+  font-size:18px;
+  color:var(--text);
+  font-weight:600;
+}
+
+.progress-bar {
+  height:18px;
+  border-radius:100px;
+  background:var(--progress-bg);
+  overflow:hidden;
+}
+.progress-fill {
+  height:100%;
+  width:0%;
+  border-radius:100px;
+  background:var(--progress-fill);
+  transition:width .4s ease;
+}
+.progress-meta {
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  margin-top:8px;
+}
+
+/* ======== Días ======== */
+.days-grid {
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:14px;
+}
+.day-card {
+  display:flex;
+  flex-direction:column;
+  padding:12px;
+  border-radius:12px;
+  background: #fffaf4;
+}
+.day-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.day-title {
+  margin:0;
+  font-size:16px;
+  font-weight:600;
+  color:var(--text);
+}
+.toggle-btn {
+  min-width:40px;
+  min-height:40px;
+  border:0;
+  background:transparent;
+  color:var(--accent);
+  border-radius:10px;
+  cursor:pointer;
+  font-size:18px;
+}
+.toggle-btn:hover {
+  background:rgba(0,0,0,0.05);
+}
+
+.day-panel {
+  margin-top:10px;
+}
+.day-list li {
+  margin:6px 0;
+}
+.day-status {
+  align-self:flex-end;
+  font-size:14px;
+  margin-top:6px;
+  color:var(--accent);
+  font-weight:600;
+}
+.btn-action {
+  padding:10px 14px;
+  border-radius:6px;
+  border:0;
+  cursor:pointer;
+  min-width:80px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+  transition:background .2s, transform .1s;
+}
+.btn-action:hover {
+  background:var(--accent-dark);
+  transform:scale(1.03);
+}
+
+/*Botón Cerrar Sesión  */
+.session-area {
+  display:flex;
+  justify-content:flex-end;
+  margin-top:18px;
+}
+.btn-logout {
+  padding:10px 18px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  min-width:120px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+  box-shadow:0 2px 4px rgba(0,0,0,0.15);
+  transition:background .2s, transform .1s;
+}
+.btn-logout:hover {
+  background:var(--accent-dark);
+  transform:scale(1.03);
+}
+
+@media (min-width:900px){
+  .days-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
