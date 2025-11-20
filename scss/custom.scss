@@ -1,0 +1,17 @@
+
+$fondo: #f7efe3;          /* Fondo beige claro */
+$fondo-acordeon: #ffffff;     /* Tarjetas blancas */
+$texto: #3b2a1a;        /* Texto marrón oscuro */
+$accent: #9c5b24;      /* Marrón medio para botones */
+$accent-dark: #7c4518; /* Versión más oscura */
+$header-bg: #7a3d00;   /* Fondo principal del header */
+$progress-bg: #e0d3c3;
+$progress-fill: #9c5b24;
+
+
+$primary: $accent;
+$accordion-button-color: $texto;
+$accordion-icon-color: $texto;
+$font-family-sans-serif: "Nunito";
+
+@import "../libs/bootstrap/scss/bootstrap";

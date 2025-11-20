@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles-actividades.css" />
+  <link rel="stylesheet" href="../css/styles-actividades.css">
+  <link rel="stylesheet" href="../css/custom.css">
 </head>
 <body>
   <!-- header -->
@@ -26,159 +27,107 @@
   </header>
 
   <main class="main">
-    <!-- Progress card -->
-    <section class="card progress-card" aria-labelledby="prog-title">
-      <h2 id="prog-title" class="card-title">Tu progreso</h2>
-      <div class="progress-wrap">
-        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="14">
-          <div class="progress-fill" style="width:14%"></div>
-        </div>
-        <div class="progress-meta">
-          <span class="meta-left">1 de 7 días completados</span>
-          <span class="meta-right">14%</span>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Days list: grid on desktop -->
-    <section class="days-grid" aria-label="Lista de días">
-      <!-- Each day item -->
-      <!-- Día 1 - expanded by default -->
-      <article class="card day-card" data-day="1">
-        <div class="day-header">
-          <h3 class="day-title">Día 1 - Verbos Básicos</h3>
-          <button class="toggle-btn" aria-expanded="true" aria-controls="panel-1" title="Mostrar/ocultar">
-            ▾
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
           </button>
-        </div>
-
-        <div id="panel-1" class="day-panel" role="region" aria-labelledby="day-1" hidden=false>
-          <ul class="day-list">
-            <li>Ver videos</li>
-            <li>Practicar vocabularios</li>
-            <li>Quiz</li>
-          </ul>
-          <div class="day-status">Completado</div>
-        </div>
-      </article>
-
-      <!-- Día 2 -->
-      <article class="card day-card" data-day="2">
-        <div class="day-header">
-          <h3 class="day-title">Día 2 - Frases comunes</h3>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="panel-2" title="Mostrar/ocultar">
-            ▾
-          </button>
-        </div>
-
-        <div id="panel-2" class="day-panel" role="region" aria-labelledby="day-2" hidden>
-          <ul class="day-list">
-            <li>Flashcards</li>
-            <li>Practica oral</li>
-            <li>Quiz</li>
-          </ul>
-          <div class="day-actions">
-            <button class="btn-action">Practicar</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
         </div>
-      </article>
+      </div>
 
-      <!-- Día 3 -->
-      <article class="card day-card" data-day="3">
-        <div class="day-header">
-          <h3 class="day-title">Día 3 - Compras y comidas</h3>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="panel-3" title="Mostrar/ocultar">
-            ▾
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Accordion Item #3
           </button>
-        </div>
-
-        <div id="panel-3" class="day-panel" role="region" aria-labelledby="day-3" hidden>
-          <ul class="day-list">
-            <li>Video</li>
-            <li>Dialogo oral</li>
-            <li>Vocabulario</li>
-          </ul>
-          <div class="day-actions">
-            <button class="btn-action">Practicar</button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
         </div>
-      </article>
+      </div>
 
-      <!-- Día 4 -->
-      <article class="card day-card" data-day="4">
-        <div class="day-header">
-          <h3 class="day-title">Día 4</h3>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="panel-4" title="Mostrar/ocultar">
-            ▾
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Accordion Item #4
           </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
+      </div>
 
-        <div id="panel-4" class="day-panel" role="region" aria-labelledby="day-4" hidden>
-          <ul class="day-list">
-            <li>Actividad A</li>
-            <li>Actividad B</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Día 5 -->
-      <article class="card day-card" data-day="5">
-        <div class="day-header">
-          <h3 class="day-title">Día 5</h3>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="panel-5" title="Mostrar/ocultar">
-            ▾
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Accordion Item #5
           </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
+      </div>
 
-        <div id="panel-5" class="day-panel" role="region" aria-labelledby="day-5" hidden>
-          <ul class="day-list">
-            <li>Actividad A</li>
-            <li>Actividad B</li>
-            <li>Actividad C</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Día 6 -->
-      <article class="card day-card" data-day="6">
-        <div class="day-header">
-          <h3 class="day-title">Día 6</h3>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="panel-6" title="Mostrar/ocultar">
-            ▾
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Accordion Item #6
           </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
+      </div>
 
-        <div id="panel-6" class="day-panel" role="region" aria-labelledby="day-6" hidden>
-          <ul class="day-list">
-            <li>Actividad A</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Día 7 -->
-      <article class="card day-card" data-day="7">
-        <div class="day-header">
-          <h3 class="day-title">Día 7</h3>
-          <button class="toggle-btn" aria-expanded="false" aria-controls="panel-7" title="Mostrar/ocultar">
-            ▾
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            Accordion Item #7
           </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div id="panel-7" class="day-panel" role="region" aria-labelledby="day-7" hidden>
-          <ul class="day-list">
-            <li>Actividad final</li>
-            <li>Repaso</li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <div class="session-area">
-      <button class="btn-logout">Cerrar Sesión</button>
+    <div class="container-fuid bg-white rounded p-3" style="margin-top: 1em;">
+      <h1 class="fs-6" style="color: #3b2a1a">Tu Progreso</h1>
+      <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%">25%</div>
+      </div>
     </div>
   </main>
-
-  <script src="../scripts/script-actividades.js"></script>
+  <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
 
