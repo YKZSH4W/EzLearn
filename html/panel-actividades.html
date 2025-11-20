@@ -2,10 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Actividades - Maqueta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles-actividades.css">
   <link rel="stylesheet" href="../css/custom.css">
@@ -13,43 +17,77 @@
 <body>
   <!-- header -->
   <header class="site-header">
-    <div class="header-left">
-      <button class="icon-btn" aria-label="Cambiar idioma"><span class="icon">A</span></button>
-      <button class="icon-btn" aria-label="Traducir"><span class="icon">文</span></button>
+    <div class="container d-flex justify-content-start">
+      <i class="fas fa-language"></i>
     </div>
 
-    <h1 class="page-title">Actividades</h1>
+    <div class="container p-0">
+      <h1 class="page-title text-center">Actividades</h1>
+    </div>
 
-    <div class="header-right">
-      <button class="icon-btn" aria-label="Menú"><span class="icon">≡</span></button>
-      <button class="icon-btn" aria-label="Perfil"><span class="icon">☺</span></button>
+    <div class="container d-flex justify-content-end">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
+
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" >
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          Actividades
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">Mi perfil</a>
+        <a href="#" class="list-group-item list-group-item-action">Cerrar sesión</a>
+        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+    </div>
+  </div>
 
   <main class="main">
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Accordion Item #1
+            Dia 1 - Repaso de lo básico
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body d-flex justify-content-between flex-wrap">
+            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
+              <strong>Verbos y frases esceciales.</strong> 
+              <ul>
+                <li>Ver video de repaso de verb to be, have, do</li>
+                <li>Practicar vocabulario: saludos y presentaciones</li>
+                <li>Quiz rápido de gramática básica</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Accordion Item #2
+          <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Dia 2 - Vocabulario de la vida diaria
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="accordion-body d-flex justify-content-between flex-wrap">
+            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
+              <strong>Verbos y frases esceciales.</strong> 
+              <ul>
+                <li>Flashcards de objetos cotidianos</li>
+                <li>Práctica oral: role-play En la tienda</li>
+                <li>Mini-quiz de vocabulario</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -57,12 +95,22 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Accordion Item #3
+            Dia 3 - Compras y comida
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="accordion-body d-flex justify-content-between flex-wrap">
+            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
+              <strong>Expresiones en restaurantes y tiendas</strong> 
+              <ul>
+                <li>Video: Ordering food in a restaurant</li>
+                <li>Diálogo guiado: cliente y mesero</li>
+                <li>Vocabulario: alimentos y precios</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -70,12 +118,22 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Accordion Item #4
+            Dia 4 - Gramática intermedia I
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="accordion-body d-flex justify-content-between flex-wrap">
+            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
+              <strong>Presente simple vs presente continuo</strong> 
+              <ul>
+                <li>Explicación con ejemplos</li>
+                <li>Ejercicios interactivos (arrastrar y soltar)</li>
+                <li>Práctica escritura: frases de rutina</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -83,12 +141,22 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Accordion Item #5
+            Dia 5 - Viajes y transporte
           </button>
         </h2>
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="accordion-body d-flex justify-content-between flex-wrap">
+            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
+              <strong>Expresiones para moverte en una ciudad</strong> 
+              <ul>
+                <li>Flashcards: transporte público y direcciones</li>
+                <li>Role-play: pedir indicaciones en inglés</li>
+                <li>Quiz de comprensión</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +164,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            Accordion Item #6
+            Dia 6 - Listening
           </button>
         </h2>
         <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -109,7 +177,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-            Accordion Item #7
+            Dia 7 - Grammar
           </button>
         </h2>
         <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -121,13 +189,19 @@
     </div>
 
     <div class="container-fuid bg-white rounded p-3" style="margin-top: 1em;">
-      <h1 class="fs-6" style="color: #3b2a1a">Tu Progreso</h1>
+      <h2 class="fs-5 fw-semibold text-primary">Tu Progreso</h1>
       <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar" style="width: 25%">25%</div>
+        <div class="progress-bar" style="width: 50%">50%</div>
       </div>
+      <label for="progress">1 de 7 dias completados</label>
     </div>
   </main>
   <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+        document.getElementById("btnPractice").addEventListener("click", function() {
+            window.location.href = "activity.html";
+        });
+  </script>
 </body>
 </html>
 

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/custom.css">
     <title>EzLearn</title>
     <style>
         .banner {
@@ -23,8 +24,7 @@
             object-position: center 30%;
         }
 
-        .container {
-            width: 100%;
+        .my-container {
             position: absolute;
             display: flex;
             align-items: center;
@@ -115,24 +115,41 @@
             border-left:2px solid #AAAAAA;
             border-right:2px solid #AAAAAA;
         }
+
+        .buttons button {
+            height: 70px;
+            width: 235px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .fa-language{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="banner">
             <div class="overlay"></div>
-            <div class="container">
-                <i class="fas fa-language"></i>
-                <div class="selector">
+            <div class="my-container" style="width: 100%;">
+                <i class="fas fa-language fs-1 text-white"></i>
+                <div class="selector text-white">
                     <label for="language">Idioma en pantalla:</label>
-                    <select id="disp-lang">
+                    <select class="text-white" id="disp-lang">
                         <option value="Español">Español</option>
                         <option value="English">English</option>
                         <option value="Français">Français</option>
                     </select>
                 </div>
             </div>
-            <h1>!Bienvenido/a a EzLearn!</h1>
+            <h1 class="text-white">!Bienvenido/a a EzLearn!</h1>
             <img src="../img/students.jpg" alt="Estudiantes Hablando">
         </div>
     </header>
@@ -146,31 +163,31 @@
             </div>
         </div>
         <div class="buttons">
-            <input type="button" value="EMPIEZA AHORA" class="primary-btn">
-            <input type="button" value="INICIAR SESION" class="secundary-btn">
+            <button type="button" class="btn btn-primary fs-4 fw-bold" id="btnRegister">EMPIEZA AHORA</button>
+            <button type="button" class="btn btn-outline-secondary fs-4 fw-bold border-4" id="btnLogin">INICIAR SESION</button>
         </div>
     </div>
     <footer>
-        <ul class="footer-list">
-            <li>
-                <a href="#">
-                    Contactanos
-                    <i class="fas fa-envelope"></i>
-                </a>
+        <ul class="nav d-flex justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
             </li>
-            <li>
-                <a href="#">
-                    Aviso de Privacidad
-                    <i class="fas fa-file-contract"></i>
-                </a >
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
             </li>
-            <li>
-                <a href="#">
-                    Instagram
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
             </li>
         </ul>
     </footer>
+    <script>
+        document.getElementById("btnRegister").addEventListener("click", function() {
+            window.location.href = "register.html";
+        });
+
+        document.getElementById("btnLogin").addEventListener("click", function() {
+            window.location.href = "login.html";
+        });
+    </script>
 </body>
 </html>

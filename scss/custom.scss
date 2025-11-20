@@ -1,17 +1,62 @@
+$myPrimary: #833C07;
+$mySecondary: #727272;
 
-$fondo: #f7efe3;          /* Fondo beige claro */
-$fondo-acordeon: #ffffff;     /* Tarjetas blancas */
-$texto: #3b2a1a;        /* Texto marrón oscuro */
-$accent: #9c5b24;      /* Marrón medio para botones */
-$accent-dark: #7c4518; /* Versión más oscura */
-$header-bg: #7a3d00;   /* Fondo principal del header */
-$progress-bg: #e0d3c3;
-$progress-fill: #9c5b24;
+/////////////////////////////////
+/// Colores y Fuentes
+/////////////////////////////////
 
-
-$primary: $accent;
-$accordion-button-color: $texto;
-$accordion-icon-color: $texto;
+$primary: $myPrimary;
+$secondary: $mySecondary;
 $font-family-sans-serif: "Nunito";
 
+/////////////////////////////////
+/// Estilos Botones
+/////////////////////////////////
+
+$btn-border-width: 3px;
+
+/////////////////////////////////
+/// Estilos Inputs
+/////////////////////////////////
+
+$input-border-width: 2px;
+$input-border-radius: 0px;
+$input-focus-box-shadow: none;
+
+/////////////////////////////////
+/// Estilos Acordeon
+/////////////////////////////////
+
+$accordion-border-color: #cfcfcf;
+$accordion-button-active-bg: none;
+$accordion-button-active-color: $myPrimary;
+$accordion-button-color: $myPrimary;
+$accordion-icon-color: $myPrimary;
+$accordion-button-focus-box-shadow: none;
+
+/////////////////////////////////
+/// Estilos Progress
+/////////////////////////////////
+
+$progress-bar-bg: #a75d26;
+
+/////////////////////////////////
+/// Estilos Select
+/////////////////////////////////
+
+$form-select-border-radius: 10px;
+$form-select-color: $myPrimary;
+$form-select-focus-box-shadow: none;
+
 @import "../libs/bootstrap/scss/bootstrap";
+
+.form-control {
+    border: none;
+    border-bottom: 2px solid $myPrimary;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn-outline-light {
+    --bs-btn-hover-color: #833C07;
+}

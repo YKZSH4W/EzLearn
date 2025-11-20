@@ -8,128 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/custom.css">
     <title>Crea tú Perfil</title>
     <style>
-        h1 {
-            font-size: 3em;
-        }
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        select {
-            padding-left: 5px;
-            height: 55px;
-            width: 70%;
-            min-width: 265px;
-            border-radius: 15px;
-            font-size: 1.4em;
-            border: 2px solid #833C07;
-        }
-
-        
-        .background-img {
-            position: fixed;
+        body {
             height: 100vh;
-            width: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/library.jpg") no-repeat center center/cover;
+            margin: 0;
         }
-        
-        
-        .container {
-            position: fixed;
-            background-color: white;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-            border-radius: 15px;
-            width: 80%;
-            height: 100%;
-            max-width: 740px;
-            max-height: 700px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .element {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-    
-
-        }
-
-        .container div > * {
-            color: #833C07;
-        }
-
-        .selector-text {
-            margin-bottom: 5px;
-            width: 70%;
-            min-width: 265px;
-        }
-
-        .selector-text > * {
-            font-size: 1.2em;
-        }
-
-        input[type="button"] {
-            width: 30%;
-            min-width: 195px;
-            color: white;
-            font-weight: normal;
-        }
-
     </style>
 </head>
-<body>
-    <div class="background-img">
-        <img src="../img/library.jpg" alt="bibloteca">
-    </div>
-    <div class="overlay"></div>
-    <div class="container">
-        <h1 style="color: #833C07;">Mi Perfil</h1>
-        <div class="element">
-            <div class="selector-text">
-                <label for="fas fa-comments">Idioma</label>
-                <i class="fas fa-comments"></i>
-            </div>
-            <select name="language">
-                <option value="Español">Español</option>
-                <option value="English">English</option>
-                <option value="Français">Français</option>
-            </select>
+<body class="align-content-center">
+    <main class="container-fluid bg-white p-5 rounded" style="width: 90%;">
+        <h1 class="text-center mb-5 text-primary fw-bold" style="font-size: 3em;">Mi Perfil</h1>
+        <label for="language" class="fs-5 text-primary mb-1">Idioma</label>
+        <i class="fa-solid fa-comment m-1 text-primary"></i>
+        <select name="language" class="form-select mb-3" aria-label="Default select example">
+            <option value="Ingles">Ingles</option>
+            <option value="Frances">Frances</option>
+            <option value="Aleman">Aleman</option>
+        </select>
+        <label for="form-floating" class="fs-5 text-primary mb-1">Conocimiento</label>
+        <i class="fa-solid fa-brain m-1 text-primary"></i>
+        <select name="level" class="form-select mb-3" aria-label="Default select example">
+            <option value="l-1">Principiante</option>
+            <option value="l-2">Avanzado</option>
+            <option value="l-3">Experto</option>
+        </select>
+        <label for="form-floating" class="fs-5 text-primary mb-1">Objetivo Principal</label>
+        <i class="fa-solid fa-bullseye m-1 text-primary"></i>
+        <select name="goal" class="form-select mb-5" aria-label="Default select example">
+            <option value="1">Ampliar Vocabulario</option>
+            <option value="2">Mejorar Speaking</option>
+            <option value="3">Mejorar Listening</option>
+        </select>
+        <div class="container-fluid d-flex justify-content-center ">
+            <button class="btn btn-primary btn-lg">Generar Plan</button>
         </div>
-        <div class="element">
-            <div class="selector-text">
-                <label for="fas fa-brain">Nivel De Conocimiento</label>
-                <i class="fas fa-brain"></i>
-            </div>
-            <select name="language">
-                <option value="level-1">Principiante</option>
-                <option value="level-2">Avanzado</option>
-                <option value="level-3">Experto</option>
-            </select>
-        </div>
-        <div class="element">
-            <div class="selector-text">
-                <label for="fas fa-bullseye">Objetivo Principal</label>
-                <i class="fas fa-bullseye"></i>
-            </div>
-            <select name="language">
-                <option value="option-1">Hablar Fluido</option>
-                <option value="option-2">Aprender Vocabulario</option>
-                <option value="option-3">Mejorar Gramatica</option>
-            </select>
-        </div>
-        <input type="button" value="Generar Plan" class="primary-btn">
-    </div>
+    </main>
 </body>
 </html>

@@ -8,26 +8,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/LR-style.css">
+  <link rel="stylesheet" href="../css/custom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <div class="login-box">
-      <h1>Inicia Sesión</h1>
 
-      <label for="correo">Correo <i class="fa-solid fa-envelope icon"></i></label>
-      <input type="email" id="correo" placeholder="Ingrese su correo">
+  <main class="container-fluid bg-white p-5 rounded" style="width: 90%;">
+    <h1 class="text-primary">Iniciar Sesión</h1>
 
-      <label for="password">Contraseña <i class="fa-solid fa-lock icon"></i></label>
-      <input type="password" id="password" placeholder="Ingrese su contraseña">
-
-      <a href="#" class="forgot" style="color: #AAAAAA;">Olvidé mi contraseña</a>
-      <div class="buttons">
-        <button class="btn primary">Continuar</button>
-        <button class="btn secondary">Cancelar</button>
+    <form id="loginForm" novalidate>
+      <label for="form-floating" class="fs-5">Correo</label>
+      <i class="fa-solid fa-envelope m-1"></i>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        <label for="email">Ingrese su correo</label>
+        <small class="text-danger" id="emailError"></small>
       </div>
-      <a href="register.html" class="register">Registrarme</a>
-    </div>
-  </div>
+
+      <label for="form-floating" class="fs-5">Contraseña</label>
+      <i class="fa-solid fa-lock m-1"></i>
+      <div class="form-floating mb">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+        <label for="password">Ingrese su contraseña</label>
+        <small class="text-danger" id="passwordError"></small>
+      </div>
+
+      <div>
+        <a href="#" class="btn btn-link text-secondary">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <div class="container mt-3 p-0">
+        <button type="submit" class="btn btn-primary btn-lg text-nowrap" id="btnContinue">Iniciar Sesión</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg text-nowrap" id="btnCancel">Cancelar</button>
+      </div>
+
+    </form>
+  </main>
+
+  <script src="../scripts/login.js"></script>
+  <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
