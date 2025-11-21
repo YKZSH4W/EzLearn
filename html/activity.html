@@ -16,22 +16,52 @@
   <header class="header">
     <i class="fas fa-language"></i>
     <h1>Día 2: Vocabulario de la vida diaria</h1>
-    <i class="fas fa-bars"></i>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menú</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          Día 2: Vocabulario de la vida diaria
+        </a>
+        <a href="#" id="btnActividades" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#warningMenu">Actividades</a>
+        <a href="#" class="list-group-item list-group-item-action">Mi perfil</a>
+        <a href="#" id="btnCerrarSesion" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#warningMenu">Cerrar Sesión</a>
+      </div>
   </header>
 
-  <main class="container-fluid bg-white p-5 rounded" style="width: 70%; margin-top: 2em;">
+  <div class="modal fade" id="warningMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">CUIDADO</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="messageBodyMenu" class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="btnAceptar">Aceptar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container-fluid bg-white p-5 rounded d-flex flex-column flex-wrap" style="width: 70%; margin-top: 2em;">
 
     <h2 class="question">What do you say when you enter a store?</h2>
 
 
     <div class="options">
-      <button id="optionA" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>A</strong>  Good bye</button>
-      <button id="optionB" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>B</strong>  Hello</button>
-      <button id="optionC" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>C</strong>  Can I go to the bathroom pls?</button>
-      <button id="optionD" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <strong>D</strong>  Do you have service?</button>
+      <button id="optionA" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#answersModal"><strong>A</strong>  Good bye</button>
+      <button id="optionB" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#answersModal"><strong>B</strong>  Hello</button>
+      <button id="optionC" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#answersModal"><strong>C</strong>  Can I go to the bathroom pls?</button>
+      <button id="optionD" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#answersModal"> <strong>D</strong>  Do you have service?</button>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="answersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
