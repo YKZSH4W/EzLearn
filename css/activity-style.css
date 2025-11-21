@@ -45,48 +45,6 @@ h1 {
     border-radius: 50%;
 }
 
-.quiz-container {
-    background-color: white;
-    margin: 40px auto;
-    height: 77vh;
-    width: 70%;
-    max-width: 700px;
-    max-height: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-}
-
-.progress-bar {
-    position: relative;
-    height: 15px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: visible;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.progress {
-    background-color: #8b4a18;
-    width: 80%; 
-    height: 100%;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-.progress-text {
-    position: absolute;
-    bottom: -25px;
-    right: 0;
-    font-size: 14px;
-    color: #8b4a18;
-}
-
 .question {
     text-align: center;
     color: #8b4a18;
@@ -100,7 +58,7 @@ h1 {
     gap: 15px;
 }
 
-.option {
+.options button {
     background-color: #EFEFEF;
     width: 80%;
     border: none;
@@ -113,8 +71,9 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.option:hover {
+.options button:hover {
     background-color: #f0e1d1;
+    color: #8b4a18;
 }
 
 @media (max-width: 690px) {

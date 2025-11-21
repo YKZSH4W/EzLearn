@@ -28,19 +28,39 @@
     <div class="container d-flex justify-content-end">
       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
     </div>
-  </header>
 
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" >
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="list-group">
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menú</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
           Actividades
         </a>
         <a href="#" class="list-group-item list-group-item-action">Mi perfil</a>
-        <a href="#" class="list-group-item list-group-item-action">Cerrar sesión</a>
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#warningCS">Cerrar Sesión</a>
         <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="modal fade" id="warningCS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">CUIDADO</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro que deseas cerrar sesión?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="cerrarSesion">Aceptar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -99,18 +119,8 @@
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body d-flex justify-content-between flex-wrap">
-            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
-              <strong>Expresiones en restaurantes y tiendas</strong> 
-              <ul>
-                <li>Video: Ordering food in a restaurant</li>
-                <li>Diálogo guiado: cliente y mesero</li>
-                <li>Vocabulario: alimentos y precios</li>
-              </ul>
-            </div>
-            <div class="d-flex justify-content-center align-items-center">
-              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
-            </div>
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
         </div>
       </div>
@@ -122,18 +132,8 @@
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body d-flex justify-content-between flex-wrap">
-            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
-              <strong>Presente simple vs presente continuo</strong> 
-              <ul>
-                <li>Explicación con ejemplos</li>
-                <li>Ejercicios interactivos (arrastrar y soltar)</li>
-                <li>Práctica escritura: frases de rutina</li>
-              </ul>
-            </div>
-            <div class="d-flex justify-content-center align-items-center">
-              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
-            </div>
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
         </div>
       </div>
@@ -145,18 +145,8 @@
           </button>
         </h2>
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body d-flex justify-content-between flex-wrap">
-            <div class="actividades" style="margin-left: 1em; margin-right: 1em;">
-              <strong>Expresiones para moverte en una ciudad</strong> 
-              <ul>
-                <li>Flashcards: transporte público y direcciones</li>
-                <li>Role-play: pedir indicaciones en inglés</li>
-                <li>Quiz de comprensión</li>
-              </ul>
-            </div>
-            <div class="d-flex justify-content-center align-items-center">
-              <button id="btnPractice" class="btn btn-primary" style="margin-right: 3em; margin-left: 3em;">Practicar</button>
-            </div>
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
         </div>
       </div>
@@ -200,6 +190,10 @@
   <script>
         document.getElementById("btnPractice").addEventListener("click", function() {
             window.location.href = "activity.html";
+        });
+
+        document.getElementById("cerrarSesion").addEventListener("click", function() {
+            window.location.href = "welcome.html";
         });
   </script>
 </body>
