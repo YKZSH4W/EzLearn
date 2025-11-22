@@ -15,9 +15,8 @@ html, body {
 
 body {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/library.jpg") no-repeat center center/cover;
-  margin: 0;
-
+  margin: 0; 
+  padding: 0;
 }
 
 /* ======== Header ======== */
@@ -42,13 +41,17 @@ body {
 
 /* ======== Main ======== */
 .main {
+  min-height: 91vh; /* garantiza cubrir la pantalla */
+  width:100%;
+  margin: 0;
+  padding:0 16px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width:100%;
-  max-width:1100px;
-  margin:16px auto;
-  padding:0 16px 32px;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  
 }
 
 label {
